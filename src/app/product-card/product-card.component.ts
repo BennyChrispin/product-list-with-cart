@@ -53,6 +53,7 @@ export class ProductCardComponent {
       this.store.dispatch(updateCartItem({ productId, quantity }));
     } else {
       this.store.dispatch(removeFromCart({ productId }));
+      this.isInCart = false;
     }
   }
 }

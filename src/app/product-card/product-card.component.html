@@ -9,11 +9,11 @@
       product.image.desktop +
       ' 1200w'
     "
+    [ngClass]="{ 'border-2 border-[#C73B0F]': isInCart }"
     sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw"
     alt="{{ product.name }}"
     class="w-full h-auto rounded-3xl mb-4 sm:mb-6 md:mb-8"
   />
-
   <div class="relative flex justify-center mb-2 sm:mb-3 md:mb-4">
     <ng-container *ngIf="!isInCart; else quantityControls">
       <button
