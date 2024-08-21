@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Store } from '@ngrx/store';
-import { updateCartItem, removeFromCart } from '../store/cart.actions';
+import { removeFromCart } from '../store/cart.actions';
 import { Product } from '../product.model';
 
 export interface CartItem {
