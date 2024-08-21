@@ -1,0 +1,31 @@
+/* Global Tailwind CSS imports */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Define the custom font faces */
+@font-face {
+  font-family: "RedHatText";
+  src: url("../src/assets/fonts/static/RedHatText-Bold.ttf") format("truetype");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "RedHatText";
+  src: url("../src/assets/fonts/static/RedHatText-Regular.ttf")
+    format("truetype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "RedHatText";
+  src: url("../src/assets/fonts/static/RedHatText-SemiBold.ttf")
+    format("truetype");
+  font-weight: 600;
+}
+
+/* Apply the custom font globally */
+body {
+  @apply font-redhat;
+  background-color: hsl(20, 50%, 98%);
+}

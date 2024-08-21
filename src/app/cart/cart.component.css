@@ -1,0 +1,7 @@
+.fixed {
+  transition: opacity 0.3s ease-in-out;
+}
+
+.bg-white {
+  transition: transform 0.3s ease-in-out;
+}
