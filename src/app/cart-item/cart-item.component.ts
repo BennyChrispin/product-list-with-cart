@@ -16,6 +16,7 @@ export interface CartItem {
 export class CartItemComponent {
   @Input() item!: CartItem;
   count: any;
+items: any;
 
   constructor(private store: Store) {}
 

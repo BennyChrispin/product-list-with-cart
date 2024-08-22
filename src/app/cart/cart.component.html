@@ -1,6 +1,6 @@
 <div
   *ngIf="cartItems$ | async as cartItems; else emptyCart"
-  class="mt-0 md:mt-16"
+  class="mt-0 md:mt-10"
 >
   <div
     *ngIf="cartItems && getKeys(cartItems).length > 0; else noItemsInCart"
