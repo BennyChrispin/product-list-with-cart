@@ -14,17 +14,17 @@
     alt="{{ product.name }}"
     class="w-full h-auto rounded-3xl mb-4 sm:mb-6 md:mb-8"
   />
-  <div class="relative flex justify-center mb-2 sm:mb-3 md:mb-4">
+  <div class="relative flex justify-center mb-2">
     <ng-container *ngIf="!isInCart; else quantityControls">
       <button
         type="submit"
         (click)="addToCart()"
-        class="absolute bottom-0 bg-[#fbf7f5] rounded-full border-2 border-[#AD8A85] flex items-center gap-2 px-4 py-2 text-xs sm:text-sm md:text-base lg:text-lg"
+        class="absolute bottom-0 md:bottom-2 bg-[#fbf7f5] rounded-full border-2 border-[#AD8A85] flex items-center gap-2 px-4 py-2 text-xs sm:text-sm md:text-base lg:text-lg"
       >
         <img
           src="../../assets/images/icon-add-to-cart.svg"
           alt="Add Cart Icon"
-          class="w-2 h-2 sm:w-3 sm:h-3 md:w-4 md:h-4 lg:w-5 lg:h-5"
+          class="w-4 h-4 md:w-5 md:h-5 lg:w-6 lg:h-6"
         />
         <p
           class="text-[#260F08] font-semibold text-xs sm:text-sm md:text-base lg:text-lg"
@@ -36,7 +36,7 @@
 
     <ng-template #quantityControls>
       <div
-        class="absolute bottom-0 rounded-full bg-[#C73B0F] px-6 py-3 sm:px-8 md:px-10 md:py-2 lg:px-12 lg:py-4"
+        class="absolute bottom-0 md:bottom-2 rounded-full bg-[#C73B0F] flex items-center gap-2 px-4 py-2 text-xs sm:text-sm md:text-base lg:text-lg"
       >
         <div class="flex items-center justify-between space-x-6 w-full">
           <button
@@ -68,18 +68,17 @@
       </div>
     </ng-template>
   </div>
+  <div class="mx-3">
+    <p class="text-xs text-[#87635A] mb-1 sm:text-sm md:text-base lg:text-lg">
+      {{ product.category }}
+    </p>
+    <h2
+      class="text-xs font-semibold mb-1 text-[#260F08] sm:text-sm md:text-base lg:text-lg"
+    >
+      {{ product.name }}
+    </h2>
+    <p class="text-sm font-semibold text-[#C73B0F] lg:text-xl">
+      $ {{ product.price.toFixed(2) }}
+    </p>
+  </div>
 </div>
-
-<p class="text-xs text-[#87635A] mb-1 sm:text-sm md:text-base lg:text-lg">
-  {{ product.category }}
-</p>
-<h2
-  class="text-xs font-semibold mb-1 text-[#260F08] sm:text-sm md:text-base lg:text-lg"
->
-  {{ product.name }}
-</h2>
-<p
-  class="text-sm font-semibold text-[#C73B0F] mb-8 sm:mb-4 md:mb-6 lg:mb-8 lg:text-xl"
->
-  $ {{ product.price.toFixed(2) }}
-</p>

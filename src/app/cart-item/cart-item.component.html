@@ -1,14 +1,16 @@
 <div
-  class="flex flex-col sm:flex-row items-center justify-between p-4 border-b border-[#87635A]"
+  class="flex flex-col items-center justify-between p-4 border-b border-[#87635A]"
 >
   <!-- Items in cart -->
-  <div class="flex items-center p-2">
-    <div>
-      <p class="text-base font-semibold">
-        {{ item.product.name }}
-      </p>
-      <div class="flex items-center justify-between text-base">
-        <h2 class="font-extrabold text-[#C73B0F]">{{ item.quantity }}x</h2>
+  <div class="w-full">
+    <h2
+      class="text-base font-semibold flex text-start items-start justify-start"
+    >
+      {{ item.product.name }}
+    </h2>
+    <div class="flex items-center justify-between mt-2">
+      <div class="flex items-center space-x-4">
+        <p class="font-extrabold text-[#C73B0F]">{{ item.quantity }}x</p>
         <p class="text-[#87635A] font-medium">
           &#64; ${{ item.product.price }}
         </p>
@@ -16,18 +18,16 @@
           {{ item.product.price * item.quantity | currency }}
         </p>
       </div>
+      <button
+        class="border-2 rounded-full border-[#87635A] p-1 sm:p-2"
+        (click)="removeItem(item)"
+      >
+        <img
+          src="../../assets/images/icon-remove-item.svg"
+          alt="Remove item"
+          class="w-2 h-2 md:w-3 md:h-3 object-cover text-[#87635A] font-bold"
+        />
+      </button>
     </div>
-  </div>
-  <div class="flex items-center mt-2 sm:mt-0">
-    <button
-      class="border-2 rounded-full border-[#87635A] p-1 sm:p-2"
-      (click)="removeItem(item)"
-    >
-      <img
-        src="../../assets/images/icon-remove-item.svg"
-        alt="Remove item"
-        class="w-3 h-3 sm:w-4 sm:h-4 object-cover text-[#87635A] font-bold"
-      />
-    </button>
   </div>
 </div>

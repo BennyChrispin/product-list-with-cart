@@ -1,4 +1,7 @@
-<div *ngIf="cartItems$ | async as cartItems; else emptyCart">
+<div
+  *ngIf="cartItems$ | async as cartItems; else emptyCart"
+  class="mt-0 md:mt-16"
+>
   <div
     *ngIf="cartItems && getKeys(cartItems).length > 0; else noItemsInCart"
     class="bg-white p-6 sm:p-8 md:p-10 rounded-xl shadow-md"

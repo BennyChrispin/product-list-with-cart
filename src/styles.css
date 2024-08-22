@@ -29,3 +29,25 @@ body {
   @apply font-redhat;
   background-color: hsl(20, 50%, 98%);
 }
+
+/* styles.css */
+.container {
+  max-width: 1200px;
+  min-width: 300px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.text {
+  font-size: 1.5rem;
+  line-height: 1.5;
+}
+
+.button {
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  background-color: #c73b0f;
+  color: white;
+  text-align: center;
+}
